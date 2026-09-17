@@ -1,4 +1,3 @@
-
 class Solution {
 public:
 int  findmax(vector<int> & v){
@@ -9,8 +8,8 @@ int  findmax(vector<int> & v){
  } 
  return maxi;
 }  
-  int calculateTotalHours(vector<int> & v , int hour){
-    int totalH =0;
+  long long  calculateTotalHours(vector<int> & v , int hour){
+    long long totalH =0;
     int n = v.size();
     for(int i=0;i<n;i++){
         totalH += ceil((double)v[i] / (double)hour);
@@ -24,7 +23,7 @@ int  findmax(vector<int> & v){
         int high = findmax(v);
         while(low <= high){
             int mid = (low+high)/2;
-            int totalH = calculateTotalHours(v , mid);
+            long long totalH = calculateTotalHours(v , mid);
             if(totalH <= h){
                 high  = mid-1;
             }else{
